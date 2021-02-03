@@ -1,4 +1,4 @@
-package Day2.lecturesamples;
+package Day2.lecturesamples.sample1;
 
 import java.io.DataInputStream;
 import java.io.IOException;
