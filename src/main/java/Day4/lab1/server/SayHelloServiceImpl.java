@@ -1,8 +1,9 @@
 package Day4.lab1.server;
 
 import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 
-public class SayHelloServiceImpl implements SayHelloService {
+public class SayHelloServiceImpl extends UnicastRemoteObject implements SayHelloService {
 
     public SayHelloServiceImpl() throws RemoteException {
         super();

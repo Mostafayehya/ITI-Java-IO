@@ -6,20 +6,17 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class RMIServer  {
-
-    public RMIServer() {
-    }
+public class RMIServer {
 
     public static void main(String[] args) {
+        new RMIServer();
+    }
+    public RMIServer() {
         try {
-            SayHelloService server =new SayHelloServiceImpl();
-            SayHelloService stub = (SayHelloService) UnicastRemoteObject
-                    .exportObject((SayHelloService) server,0);
+            SayHelloService server = new SayHelloServiceImpl();
+            Registry registry = LocateRegistry.createRegistry(1099); // Default port is 1099, know the difference between create registry and getRegistry()
 
-            Registry registry = LocateRegistry.createRegistry(1099); // Default port is 1099
-
-            registry.bind("HelloService",stub);
+            registry.bind("HelloService", server);
             System.err.println("Server Ready");
 
 
@@ -27,5 +24,8 @@ public class RMIServer  {
             e.printStackTrace();
         }
 
-}
+    }
+
+
+
 }
