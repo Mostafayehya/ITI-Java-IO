@@ -29,5 +29,12 @@ public class BroadcastServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+       // sendingUpdates(s);
     }
+
+    private static void sendingUpdates(String s) {
+    }
+
+
 }

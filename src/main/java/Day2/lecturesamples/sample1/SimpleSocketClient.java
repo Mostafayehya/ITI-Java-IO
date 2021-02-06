@@ -13,6 +13,7 @@ public class SimpleSocketClient {
 
         InputStream socketInputStream = socket.getInputStream();
 
+        // Todo) Ask what is the difference between inputStream and DataInput stream? w
         DataInputStream socketDataInputStream = new DataInputStream(socketInputStream);
 
         String comingString= socketDataInputStream.readUTF();
