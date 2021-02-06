@@ -19,8 +19,9 @@ public class RMIClient {
         try {
             Registry registry = LocateRegistry.getRegistry("127.0.0.1");
             SayHelloService sayHelloService = (SayHelloService) registry.lookup("HelloService");
+            String response = sayHelloService.sayHello("Mostafa");
+            System.out.println(response);
 
-            sayHelloService.sayHello("Mostafa");
         } catch (RemoteException e) {
             e.printStackTrace();
         } catch (NotBoundException e) {

@@ -6,6 +6,8 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../URLConnection-WebView/pom.xml" />
+        <option value="$PROJECT_DIR$/../Remote-GUI-CRUD/pom.xml" />
+        <option value="$PROJECT_DIR$/../RMI-GUI-CRUD/pom.xml" />
       </list>
     </option>
   </component>
