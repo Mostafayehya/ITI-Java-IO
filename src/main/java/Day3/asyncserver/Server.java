@@ -34,6 +34,8 @@ public class Server {
                 toSend.get();
                 buffer.clear();
 
+                clientSocketChannel.close();
+
             }
 
         } catch (IOException e) {
